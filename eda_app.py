@@ -17,9 +17,17 @@ def load_data(data):
     return df
 
 
-data = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\diabetes_prediction_ml_app\\data\\diabetes_data_upload.csv"
+data = ".\data\diabetes_data_upload.csv"
 
-data_cleanded = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\my_work\\data\diabetes_data_upload_clean.csv"
+# data = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\diabetes_prediction_ml_app\\data\\diabetes_data_upload.csv"
+
+
+data_cleanded = ".\data\diabetes_data_upload_clean.csv"
+
+# data_cleanded = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\my_work\\data\diabetes_data_upload_clean.csv"
+
+
+data_freq = ".\data\\freqdist_of_age_data.csv"
 
 data_freq = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\my_work\\data\\freqdist_of_age_data.csv"
 
@@ -57,9 +65,9 @@ def run_eda_app():
 
         with col1:
             with st.expander("Dist Plot of Gender"):
-                fig = plt.figure()
-                sns.countplot(x='Gender', data=df)
-                st.pyplot(fig)
+                # fig = plt.figure()
+                # sns.countplot(x='Gender', data=df)
+                # st.pyplot(fig)
 
                 gen_df = df['Gender'].value_counts().to_frame()
                 gen_df = gen_df.reset_index()
@@ -91,18 +99,18 @@ def run_eda_app():
 
         with st.expander("Outlier Detection Plot"):
             # outlier_df =
-            fig = plt.figure()
-            sns.boxplot(df['Age'])
-            st.pyplot(fig)
+            # fig = plt.figure()
+            # sns.boxplot(df['Age'])
+            # st.pyplot(fig)
 
             p3 = px.box(df, x='Age', color='Gender')
             st.plotly_chart(p3,  use_container_width=True)
 
         with st.expander("Correlation Plot"):
             corr_matrix = df_encoded.corr()
-            fig = plt.figure(figsize=(20, 10))
-            sns.heatmap(corr_matrix, annot=True)
-            st.pyplot(fig)
+            # fig = plt.figure(figsize=(20, 10))
+            # sns.heatmap(corr_matrix, annot=True)
+            # st.pyplot(fig)
 
             p3 = px.imshow(corr_matrix)
             st.plotly_chart(p3)
