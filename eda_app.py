@@ -17,19 +17,20 @@ def load_data(data):
     return df
 
 
-data = ".\data\diabetes_data_upload.csv"
+data = "https://raw.githubusercontent.com/7DataScientist/Dia_deployed/main/data/diabetes_data_upload.csv"
+# data = ".\data\diabetes_data_upload.csv"
 
 # data = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\diabetes_prediction_ml_app\\data\\diabetes_data_upload.csv"
 
-
-data_cleanded = ".\data\diabetes_data_upload_clean.csv"
+data_cleanded = "https://raw.githubusercontent.com/7DataScientist/Dia_deployed/main/data/diabetes_data_upload_clean.csv"
+# data_cleanded = ".\data\diabetes_data_upload_clean.csv"
 
 # data_cleanded = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\my_work\\data\diabetes_data_upload_clean.csv"
 
+data_freq = "https://raw.githubusercontent.com/7DataScientist/Dia_deployed/main/data/freqdist_of_age_data.csv"
+# data_freq = ".\data\\freqdist_of_age_data.csv"
 
-data_freq = ".\data\\freqdist_of_age_data.csv"
-
-data_freq = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\my_work\\data\\freqdist_of_age_data.csv"
+# data_freq = "D:\\27_Streamlit\\000_Projects\\01_Section_7_Machine_Learning_App\\my_work\\data\\freqdist_of_age_data.csv"
 
 
 def run_eda_app():
